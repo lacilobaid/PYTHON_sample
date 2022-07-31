@@ -30,7 +30,7 @@ menu_devam=""
 kartNo = ""
 kartKod = ""
 kartTarih = ""
-getir = ""
+getir_secim = ""
 bakiye = 500
 kullanici_kartNo =[]
 restoranlar = []
@@ -148,12 +148,12 @@ def restoran_listele():
     restoranlar = input("1. McDonald's \n2. Adıyamanlı Cigkofteci \n3. Tuğra Dürüm \n4. Komagene Cigkofte \n5. Zater Döner \n6. Bambara Ekmek Arası \n7. Pillavi \n8. Okuzefendi Burger \n9. Ekleristan \nBir secim yapınız: ")
 
 def getir():
-    global getir
+    global getir_secim
     print("**************************")
-    getir=input("1. EXYemek getirsin(+7 TL) \n2. Restoran getirsin \nBir secim yapınız: ")
-    if getir=="1" or getir=="2":
+    getir_secim=input("1. EXYemek getirsin(+7 TL) \n2. Restoran getirsin \nBir secim yapınız: ")
+    if getir_secim=="1" or getir_secim=="2":
         restoran_listele()
-        restoran_secim(restoranlar)
+        a(restoranlar)
     else:
         print("Gecersiz islem...")
 
@@ -220,7 +220,7 @@ def restoran_detay(sayi):
         print("Gecersiz islem...")
 
 def odeme():
-    global kartNo, kartTarih, kartKod, kart_kayit, odeme_hakki, kayitli_kart_odeme, bakiye, getir
+    global kartNo, kartTarih, kartKod, kart_kayit, odeme_hakki, kayitli_kart_odeme, bakiye, getir_secim
     print("**************************")
     odeme_hakki = 3
     while True:
@@ -278,7 +278,7 @@ def odeme():
                     print("Yetersiz bakiye")
                     break
                 if kullanici_telefon.startswith("542") or kullanici_telefon.startswith("544") or kullanici_telefon.startswith("546") or kullanici_telefon.startswith("549"):
-                    if getir=="1":
+                    if getir_secim=="1":
                         bakiye = bakiye - indirimli_vodafoneEX
                         print("**Vodafone'lu indiriminden yararlandınız....")
                         print("Odeme basarılı")
@@ -294,7 +294,7 @@ def odeme():
                         sepet.append("50TL yemek + icecek")
                         odeme_sonrasi()
                         break
-                elif getir == "1":
+                elif getir_secim == "1":
                     bakiye = bakiye - EXYemek_fiyat
                     print("Odeme basarılı")
                     print("Kalan bakiyeniz: {}".format(bakiye))
@@ -316,7 +316,7 @@ def odeme():
                     print("Yetersiz bakiye")
                     break
                 if kullanici_telefon.startswith("542") or kullanici_telefon.startswith("544") or kullanici_telefon.startswith("546") or kullanici_telefon.startswith("549"):
-                    if getir == "1":
+                    if getir_secim == "1":
                         bakiye = bakiye - indirimli_vodafoneEX2
                         print("**Vodafone'lu indiriminden yararlandınız....")
                         print("Odeme basarılı")
@@ -332,7 +332,7 @@ def odeme():
                         sepet.append("70TL yemek + icecek + tatli")
                         odeme_sonrasi()
                         break
-                elif getir == "1":
+                elif getir_secim == "1":
                     bakiye = bakiye - EXYemek_fiyat2
                     print("Odeme basarılı")
                     print("Kalan bakiyeniz: {}".format(bakiye))
@@ -354,7 +354,7 @@ def odeme():
                     print("Yetersiz bakiye")
                     break
                 if kullanici_telefon.startswith("542") or kullanici_telefon.startswith("544") or kullanici_telefon.startswith("546") or kullanici_telefon.startswith("549"):
-                    if getir == "1":
+                    if getir_secim == "1":
                         bakiye = bakiye - indirimli_vodafoneEX2
                         print("**Vodafone'lu indiriminden yararlandınız....")
                         print("Odeme basarılı")
@@ -369,7 +369,7 @@ def odeme():
                         sepet.append("99TL 2'li menu + 2 icecek + patates kızartması")
                         odeme_sonrasi()
                         break
-                elif getir == "1":
+                elif getir_secim == "1":
                     bakiye = bakiye - EXYemek_fiyat2
                     print("")
                     print("Odeme basarılı")
