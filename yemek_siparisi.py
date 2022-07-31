@@ -153,7 +153,7 @@ def getir():
     getir_secim=input("1. EXYemek getirsin(+7 TL) \n2. Restoran getirsin \nBir secim yapınız: ")
     if getir_secim=="1" or getir_secim=="2":
         restoran_listele()
-        a(restoranlar)
+        restoran_secim(restoranlar)
     else:
         print("Gecersiz islem...")
 
