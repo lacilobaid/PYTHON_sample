@@ -154,8 +154,6 @@ def getir():
     if getir_secim=="1" or getir_secim=="2":
         restoran_listele()
         restoran_secim(restoranlar)
-    else:
-        print("Gecersiz islem...")
 
 def menu_1devam():
     global menu_devam
