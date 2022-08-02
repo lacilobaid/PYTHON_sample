@@ -279,6 +279,7 @@ def odeme():
                     if getir_secim=="1":
                         bakiye = bakiye - indirimli_vodafoneEX
                         print("**Vodafone'lu indiriminden yararlandınız....")
+                        print("**+7 TL getirme ücreti....")
                         print("Odeme basarılı")
                         print("Kalan bakiyeniz: {}".format(bakiye))
                         sepet.append("50TL yemek + icecek")
@@ -294,6 +295,7 @@ def odeme():
                         break
                 elif getir_secim == "1":
                     bakiye = bakiye - EXYemek_fiyat
+                    print("**+7 TL getirme ücreti....")
                     print("Odeme basarılı")
                     print("Kalan bakiyeniz: {}".format(bakiye))
                     sepet.append("50TL yemek + icecek")
@@ -317,6 +319,7 @@ def odeme():
                     if getir_secim == "1":
                         bakiye = bakiye - indirimli_vodafoneEX2
                         print("**Vodafone'lu indiriminden yararlandınız....")
+                        print("**+7 TL getirme ücreti....")
                         print("Odeme basarılı")
                         print("Kalan bakiyeniz: {}".format(bakiye))
                         sepet.append("70TL yemek + icecek + tatli")
@@ -332,6 +335,7 @@ def odeme():
                         break
                 elif getir_secim == "1":
                     bakiye = bakiye - EXYemek_fiyat2
+                    print("**+7 TL getirme ücreti....")
                     print("Odeme basarılı")
                     print("Kalan bakiyeniz: {}".format(bakiye))
                     sepet.append("70TL yemek + icecek + tatli")
@@ -353,8 +357,9 @@ def odeme():
                     break
                 if kullanici_telefon.startswith("542") or kullanici_telefon.startswith("544") or kullanici_telefon.startswith("546") or kullanici_telefon.startswith("549"):
                     if getir_secim == "1":
-                        bakiye = bakiye - indirimli_vodafoneEX2
+                        bakiye = bakiye - indirimli_vodafoneEX3
                         print("**Vodafone'lu indiriminden yararlandınız....")
+                        print("**+7 TL getirme ücreti....")
                         print("Odeme basarılı")
                         print("Kalan bakiyeniz: {}".format(bakiye))
                         sepet.append("99TL 2'li menu + 2 icecek + patates kızartması")
@@ -368,8 +373,8 @@ def odeme():
                         odeme_sonrasi()
                         break
                 elif getir_secim == "1":
-                    bakiye = bakiye - EXYemek_fiyat2
-                    print("")
+                    bakiye = bakiye - EXYemek_fiyat3
+                    print("**+7 TL getirme ücreti....")
                     print("Odeme basarılı")
                     print("Kalan bakiyeniz: {}".format(bakiye))
                     sepet.append("99TL 2'li menu + 2 icecek + patates kızartması")
