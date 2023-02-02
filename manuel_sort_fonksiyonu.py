@@ -1,6 +1,6 @@
 # yemek siparisi uygulamasında import
 
-# Yasasın indian youtubers
+
 def manuel_sort(dizi, indeks1,indeks2):
     i = indeks1 - 1
     pivot = dizi[indeks2]
