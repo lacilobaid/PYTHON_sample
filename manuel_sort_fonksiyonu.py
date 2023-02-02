@@ -17,7 +17,7 @@ def ikinci(dizi, indeks1, indeks2):
         ikinci(dizi, indeks1, pivot-1)
         ikinci(dizi, pivot + 1, indeks2)
 
-# Yasasın indian youtubers
+
 def manuel_sort_tersten(dizi, indeks1,indeks2):
     i = indeks1 - 1
     pivot = dizi[indeks2]
